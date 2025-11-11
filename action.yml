@@ -21,7 +21,7 @@ runs:
       id: result
       run: |
         echo "Returning the result"
-        echo "result=7777" >> GITHUB_OUTPUT
+        echo "result=value" >> $GITHUB_OUTPUT
       shell: bash  
     - name: Print previous step output
       run: echo "Previous Step Results ${{ steps.result.outputs.result }}"
