@@ -17,3 +17,8 @@ runs:
         echo "Introduction Step"
         echo "This is the input ${{ inputs.argument }}"
       shell: bash
+    - name: Return the result
+      run: |
+        echo "Returning the result"
+        echo "result=${{ inputs.argument }}" >> GITHUB_OUTPUT
+      shell: bash  
