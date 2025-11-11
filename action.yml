@@ -1,1 +1,29 @@
-
+name: 'Calculator'
+description: 'Count the number of arguments passed in'
+author: 'Nigel'
+inputs:
+  argument:
+    description: 'first input'
+    required: true
+    default: 2
+outputs:
+  result:
+    description: 'result output'
+    value: ${{ steps.calculation.outputs.result }}
+runs:
+  using: "composite"
+  steps: 
+    - name: Introduction
+      run: |
+        echo "Introduction Step"
+        echo "This is the input ${{ inputs.argument }}"
+      shell: bash  
+    - name: Calculation
+      id: calculation
+      run |
+        echo "This is the calculation phase"
+        echo "result=${{ inputs.argument }}" >> $GITHUB_OUTPUT
+      shell: bash
+        
+    
+    
