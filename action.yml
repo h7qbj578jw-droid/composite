@@ -21,8 +21,5 @@ runs:
       id: calculation
       run |
         echo "This is the calculation phase"
-        echo "result=${{ inputs.argument }}" >> $GITHUB_OUTPUT
-      shell: bash
-        
     
     
