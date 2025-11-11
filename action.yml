@@ -25,3 +25,4 @@ runs:
       shell: bash  
     - name: Print previous step output
       run: echo "Previous Step Results ${{ steps.result.outputs.result }}"
+      shell: bash
