@@ -1,6 +1,5 @@
 name: Calculator
 description: Count the number of arguments passed in
-author: 'Nigel'
 inputs:
   argument:
     description: 'first input'
